@@ -3,7 +3,7 @@
 ---
 
 
-# ## API Endpoints
+### API Endpoints:
 
 ```http
 GET /api/characters
@@ -183,4 +183,8 @@ GET /api/characters/search?name=Gon
 --- 
 
 
-# Link to deploted app 
+### Link to deploted app from Render:  
+
+https://hxh-crud-api-1.onrender.com
+
+
