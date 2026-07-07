@@ -11,8 +11,8 @@ public class AppController {
 
   @GetMapping
   public ResponseEntity<String> homePage() {
-    String html = "<html> <body><h1>Hello from the HxH Character API!</h1>" +
-        "<p>Our API endpoints:</p>" +
+    String html = "<html> <body><h1>The HxH Character API!</h1>" +
+        "<p>API endpoints:</p>" +
         " <ul><li><a href=\"/api/characters\">/api/characters</a></li>" +
         "<li><a href=\"/api/characters/1\">/api/characters/{id} (you can replace 1 with any character ID)</a></li>" +
         "<li><a href=\"/api/characters/search?name=Gon\">/api/characters/search?name=Gon (find characters whose name contains a string)</a></li>"
@@ -20,8 +20,8 @@ public class AppController {
         "<li><a href=\"/api/characters/category?type=universe&value=Hunter x Hunter\">/api/characters/category?type=universe&value=Hunter x Hunter (filter by category: universe, species, role, nenType, or age)</a></li>"
         +
         "</ul>" +
-        "<p> Try POST, PUT, and DELETE requests using tools like EchoAPI, Postman, ThunderClient or curl.</p>" +
-        "<p> For example, to create a new character, send a POST request to <code>/api/characters</code> with a JSON body like:</p>"
+        "<p> Try POST, PUT, and DELETE requests using EchoAPI</p>" +
+        "<p> To create a new character, send a POST request to <code>/api/characters</code> with a JSON body like:</p>"
         +
         "<pre>{\"name\": \"Gon Freecss\", \"description\": \"An energetic young Hunter searching for his father.\", \"role\": \"Protagonist\", \"age\": 12, \"universe\": \"Hunter x Hunter\", \"species\": \"Human\", \"nenType\": \"Enhancement\"}</pre>"
         +
