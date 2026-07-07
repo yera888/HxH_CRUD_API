@@ -8,4 +8,4 @@ FROM eclipse-temurin:25-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar CrudApiApplication.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "HxHApplication.jar"]
+ENTRYPOINT ["java", "-jar", "CrudApiApplication.jar"]
