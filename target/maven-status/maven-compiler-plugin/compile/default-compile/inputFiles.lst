@@ -1,0 +1,6 @@
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/HxHApplication.java
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/character/AppController.java
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/character/Character.java
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/character/CharacterApiController.java
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/character/CharacterRepository.java
+/Users/yeraldinetamayo/HxH_CRUD_API/src/main/java/com/CRUD_API/HxH/character/CharacterService.java
