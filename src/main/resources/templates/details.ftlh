@@ -27,7 +27,7 @@
       </div>
       <div class="details-intro">
         <p class="details-eyebrow">Character Profile</p>
-        <h1 class="details-name">Killua <span>Zoldyck</span></h1>
+        <h1 class="details-name">${character.name}</span></h1>
         <div class="details-tags">
           <span class="tag">Transmutation</span>
           <span class="tag">Assassin</span>
