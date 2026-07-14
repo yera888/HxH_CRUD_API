@@ -1,3 +1,4 @@
+
 package com.CRUD_API.HxH.character;
 
 import jakarta.persistence.Column;
