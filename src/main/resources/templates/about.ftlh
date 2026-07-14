@@ -1,6 +1,3 @@
-Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
-1
-100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +37,7 @@ Try AI directly in your favorite apps … Use Gemini to generate drafts and refi
           <p>
             This gallery was built to celebrate five characters who each represent a different dimension of that complexit as well as my most favorite characters in the anime: the pure-hearted optimist Gon, the trained killer reclaiming his humanity Killua, the beautiful chaos and complex agent Hisoka, the quietly fierce loyalist Palm, and the philosophical crime boss Chrollo. Together they cover nearly the full moral and emotional spectrum the series explores.
           </p>
-         
+
         </div>
       </section>
 
