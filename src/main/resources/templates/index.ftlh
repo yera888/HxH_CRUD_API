@@ -1,3 +1,6 @@
+Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
+1
+100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +13,9 @@
 
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="details.html">Details</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="new-character-form.html">Add a Character</a></li>
+      <li><a href="/character" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/character/new">Add a Character</a></li>
     </ul>
   </nav>
 
@@ -27,124 +29,46 @@
 
   <main class="gallery-section">
     <div class="search-bar-wrapper">
-      <input type="text" class="search-bar" placeholder="Search by name or role..." aria-label="Search characters" />
+      <form action="/character/search" method="get">
+        <input type="text" class="search-bar" name="name" placeholder="Search by name..." aria-label="Search characters" />
+      </form>
+    </div>
+
+    <div class="search-bar-wrapper">
+      <form action="/character/category" method="get" style="display:flex; gap:0.5rem; max-width:480px; width:100%;">
+        <select name="type" class="search-bar" style="max-width:160px;">
+          <option value="universe">Universe</option>
+          <option value="species">Species</option>
+          <option value="role">Role</option>
+          <option value="nenType">Nen Type</option>
+          <option value="age">Age</option>
+        </select>
+        <input type="text" name="value" class="search-bar" placeholder="Category value..." />
+        <button type="submit" class="btn-submit">Filter</button>
+      </form>
     </div>
 
     <div class="card-grid">
-
-      <a href="details.html" class="card gon">
-        <div class="card-img-wrapper">
-          <img src="/images/gon.png" alt="Gon Freecss" />
-             
-        </div>
-        <div class="card-body">
-          <h2 class="card-name">Gon Freecss</h2>
-          <div class="card-tags">
-            <span class="tag">Hunter</span>
-            <span class="tag">Protagonist</span>
+      <#list charactersList as character>
+        <a href="/character/${character.characterId?c}" class="card">
+          <div class="card-img-wrapper">
+            <img src="/images/anime.png" alt="${character.name}" />
           </div>
-          <ul class="card-details">
-            <li><span>Universe</span> Hunter x Hunter</li>
-            <li><span>Role</span> Main Protagonist</li>
-            <li><span>Species</span> Human</li>
-            <li><span>Nen Type</span> Enhancement</li>
-            <li><span>Power Level</span> ★★★★☆</li>
-          </ul>
-          <p class="card-summary">A young boy from Whale Island who sets out to find his legendary Hunter father. Pure determination and his inate otherworld instincts make him one of the most formidable Nen users of his generation.</p>
-        </div>
-        <div class="card-aura gon-aura"></div>
-      </a>
-
-      <a href="details.html" class="card killua">
-        <div class="card-img-wrapper">
-          <img src="/images/killua.png" alt="Killua Zoldyck" />
-\        </div>
-        <div class="card-body">
-          <h2 class="card-name">Killua Zoldyck</h2>
-          <div class="card-tags">
-            <span class="tag">Assassin</span>
-            <span class="tag">Hunter</span>
+          <div class="card-body">
+            <h2 class="card-name">${character.name}</h2>
+            <div class="card-tags">
+              <#if character.role??><span class="tag">${character.role}</span></#if>
+              <#if character.nenType??><span class="tag">${character.nenType}</span></#if>
+            </div>
+            <ul class="card-details">
+              <li><span>Universe</span> ${(character.universe)!'Unknown'}</li>
+              <li><span>Species</span> ${(character.species)!'Unknown'}</li>
+              <li><span>Age</span> ${character.age?c}</li>
+            </ul>
+            <p class="card-summary">${character.description}</p>
           </div>
-          <ul class="card-details">
-            <li><span>Universe</span> Hunter x Hunter</li>
-            <li><span>Role</span> Deuteragonist</li>
-            <li><span>Species</span> Human</li>
-            <li><span>Nen Type</span> Transmutation</li>
-            <li><span>Power Level</span> ★★★★★</li>
-          </ul>
-          <p class="card-summary">Heir to the feared Zoldyck assassin family. Trained since birth to kill, Killua befriends Gon and struggles to forge an identity beyond his murderous upbringing, wielding lightning-fast Nen.</p>
-        </div>
-        <div class="card-aura killua-aura"></div>
-      </a>
-
-      <a href="details.html" class="card hisoka">
-        <div class="card-img-wrapper">
-          <img src="/images/hisoka.png" alt="Hisoka Morrow" />
-        </div>
-        <div class="card-body">
-          <h2 class="card-name">Hisoka </h2>
-          <div class="card-tags">
-            <span class="tag">Villain</span>
-            <span class="tag">Magician</span>
-          </div>
-          <ul class="card-details">
-            <li><span>Universe</span> Hunter x Hunter</li>
-            <li><span>Role</span> Antagonist / Anti-Hero</li>
-            <li><span>Species</span> Human</li>
-            <li><span>Nen Type</span> Transmutation</li>
-            <li><span>Power Level</span> ★★★★★</li>
-          </ul>
-          <p class="card-summary">A sinister magician obsessed with finding worthy opponents. Hisoka is unpredictable, fighting for thrill rather than ideology, using his Bungee Gum Nen ability to lethal effect.</p>
-        </div>
-        <div class="card-aura hisoka-aura"></div>
-      </a>
-
-      <a href="details.html" class="card palm">
-        <div class="card-img-wrapper">
-          <img src="/images/palm.png" alt="Palm Siberia" />
-
-        </div>
-        <div class="card-body">
-          <h2 class="card-name">Palm </h2>
-          <div class="card-tags">
-            <span class="tag">Hunter</span>
-            <span class="tag">Ally</span>
-          </div>
-          <ul class="card-details">
-            <li><span>Universe</span> Hunter x Hunter</li>
-            <li><span>Role</span> Supporting Character</li>
-            <li><span>Species</span> Human / Chimera Ant</li>
-            <li><span>Nen Type</span> Conjuration</li>
-            <li><span>Power Level</span> ★★★☆☆</li>
-          </ul>
-          <p class="card-summary">A devoted student of Knov who is fiercely loyal and emotionally intense. After being captured and reborn as a Chimera Ant, Palm gains terrifying new abilities while retaining her true self.</p>
-        </div>
-        <div class="card-aura palm-aura"></div>
-      </a>
-
-      <a href="details.html" class="card chrollo">
-        <div class="card-img-wrapper">
-          <img src="/images/Krollo.png" alt="Chrollo Lucilfe" />
-
-        </div>
-        <div class="card-body">
-          <h2 class="card-name">Chrollo Lucilfer</h2>
-          <div class="card-tags">
-            <span class="tag">Villain</span>
-            <span class="tag">Leader</span>
-          </div>
-          <ul class="card-details">
-            <li><span>Universe</span> Hunter x Hunter</li>
-            <li><span>Role</span> Primary Antagonist</li>
-            <li><span>Species</span> Human</li>
-            <li><span>Nen Type</span> Specialization</li>
-            <li><span>Power Level</span> ★★★★★</li>
-          </ul>
-          <p class="card-summary">The cold and cultured leader of the Phantom Troupe. Chrollo's Skill Hunter ability steals the Nen powers of others, making him an unpredictably versatile and exceptionally dangerous enemy.</p>
-        </div>
-        <div class="card-aura chrollo-aura"></div>
-      </a>
-
+        </a>
+      </#list>
     </div>
   </main>
 

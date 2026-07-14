@@ -1,3 +1,6 @@
+Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
+1
+100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +13,9 @@
 
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="details.html">Details</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="new-character-form.html">Add Character</a></li>
+      <li><a href="/character">Home</a></li>
+      <li><a href="/about" class="active">About</a></li>
+      <li><a href="/character/new">Add Character</a></li>
     </ul>
   </nav>
 

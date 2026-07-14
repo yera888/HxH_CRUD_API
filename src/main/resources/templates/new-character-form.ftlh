@@ -1,3 +1,6 @@
+Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
+1
+100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +13,9 @@
 
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="details.html">Details</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="new-character-form.html" class="active">Add a Character</a></li>
+      <li><a href="/character">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/character/new" class="active">Add a Character</a></li>
     </ul>
   </nav>
 
@@ -26,7 +28,7 @@
     </div>
 
     <div class="form-card">
-      <form class="character-form" onsubmit="return false;">
+      <form class="character-form" action="/character/save" method="post">
 
         <div class="form-group">
           <label for="char-name">Name <span class="required">*</span></label>
@@ -34,8 +36,13 @@
         </div>
 
         <div class="form-group">
-          <label for="char-universe">Universe <span class="required">*</span></label>
-          <input type="text" id="char-universe" name="universe" placeholder="e.g. Hunter x Hunter" required />
+          <label for="char-description">Description <span class="required">*</span></label>
+          <textarea id="char-description" name="description" rows="3" placeholder="A short description of the character" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="char-universe">Universe</label>
+          <input type="text" id="char-universe" name="universe" placeholder="e.g. Hunter x Hunter" />
         </div>
 
         <div class="form-row">
@@ -55,7 +62,7 @@
 
           <div class="form-group">
             <label for="char-nen">Nen Type</label>
-            <select id="char-nen" name="nen_type">
+            <select id="char-nen" name="nenType">
               <option value="" disabled selected>Select Nen type</option>
               <option>Enhancement</option>
               <option>Transmutation</option>
@@ -75,40 +82,20 @@
           </div>
 
           <div class="form-group">
-            <label for="char-power">Power Level</label>
-            <select id="char-power" name="power_level">
-              <option value="" disabled selected>Select power level</option>
-              <option>★☆☆☆☆ — Weak</option>
-              <option>★★☆☆☆ — Below Average</option>
-              <option>★★★☆☆ — Average</option>
-              <option>★★★★☆ — Strong</option>
-              <option>★★★★★ — Elite</option>
-            </select>
+            <label for="char-age">Age</label>
+            <input type="number" step="any" id="char-age" name="age" placeholder="e.g. 12" />
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="char-img">Image URL <span class="required">*</span></label>
-          <input type="url" id="char-img" name="image_url" placeholder="https://example.com/image.png" required />
-        </div>
-
-        <div class="form-group">
-          <label for="char-affiliation">Affiliation</label>
-          <input type="text" id="char-affiliation" name="affiliation" placeholder="e.g. Hunter Association, Phantom Troupe" />
         </div>
 
         <div class="form-actions">
           <button type="submit" class="btn-submit">Submit a Character</button>
-          <a href="index.html" class="btn-cancel">Cancel</a>
+          <a href="/character" class="btn-cancel">Cancel</a>
         </div>
 
       </form>
     </div>
 
   </main>
-
-  <label for="char-image">Character Image</label>
-  <input type="file" id="char-image" name="char-image" accept="image/*" />
 
 </body>
 </html>

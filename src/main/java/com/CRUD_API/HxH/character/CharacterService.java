@@ -1,3 +1,4 @@
+
 package com.CRUD_API.HxH.character;
 
 import java.util.List;
@@ -64,6 +65,5 @@ public class CharacterService {
   }
 
 }
-
 
 
