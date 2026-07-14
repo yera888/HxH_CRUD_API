@@ -46,6 +46,13 @@ public class CharacterController {
         return "redirect:/character/" + created.getCharacterId();
     }
 
+    @GetMapping("/character/update/{id}")
+    public String showUpdateForm(@PathVariable long id, Model model) {
+        Character character = characterService.getCharacterById(id);
+        model.addAttribute("character", character);
+        return "character-update";
+    }
+
     @PostMapping("/character/update/{id}")
     public String updateCharacter(@PathVariable long id, Character updatedCharacter) {
         Character character = characterService.updateCharacter(id, updatedCharacter);

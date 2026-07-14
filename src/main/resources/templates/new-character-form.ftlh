@@ -1,6 +1,3 @@
-Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
-1
-100%
 <!DOCTYPE html>
 <html lang="en">
 <head>

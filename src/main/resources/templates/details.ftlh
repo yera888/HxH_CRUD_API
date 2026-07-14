@@ -1,6 +1,3 @@
-Try AI directly in your favorite apps … Use Gemini to generate drafts and refine content, plus get Gemini Pro with access to Google's next-gen AI
-1
-100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,53 +48,12 @@ Try AI directly in your favorite apps … Use Gemini to generate drafts and refi
       </section>
     </div>
 
-    <hr>
-    <div class="details-block" style="margin-top:2rem;">
-      <h2>Edit Character</h2>
-      <form class="character-form" action="/character/update/${character.characterId?c}" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" value="${character.name}" required />
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea id="description" name="description" rows="3" required>${character.description}</textarea>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="role">Role</label>
-            <input type="text" id="role" name="role" value="${(character.role)!''}" />
-          </div>
-          <div class="form-group">
-            <label for="nenType">Nen Type</label>
-            <input type="text" id="nenType" name="nenType" value="${(character.nenType)!''}" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="universe">Universe</label>
-            <input type="text" id="universe" name="universe" value="${(character.universe)!''}" />
-          </div>
-          <div class="form-group">
-            <label for="species">Species</label>
-            <input type="text" id="species" name="species" value="${(character.species)!''}" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input type="number" step="any" id="age" name="age" value="${character.age?c}" />
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="btn-submit">Save Changes</button>
-        </div>
-      </form>
-    </div>
-
     <div class="details-back">
       <a href="/character" class="btn-back">&larr; Back to Gallery</a>
       <a href="/about" class="btn-back">About This Site</a>
       <a href="/character/new" class="btn-back">Add a Character</a>
-      <a href="/character/delete/${character.characterId?c}" class="btn-back" style="color:#f87171; border-color:#f87171;">Delete Character</a>
+      <a href="/character/update/${character.characterId?c}" class="btn-back" style="color:#34d399; border-color:#34d399;">Edit Character</a>
+      <a href="/character/delete/${character.characterId?c}" class="btn-back" style="color:#f87171; border-color:#f87171;" onclick="return confirm('Delete ${character.name}?');">Delete Character</a>
     </div>
 
   </main>
